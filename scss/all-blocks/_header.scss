@@ -1,0 +1,150 @@
+.navbar {
+    margin-top: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title {
+        font-size: 36px;
+        font-weight: 400;
+
+        span {
+            color: #c4c4c4;
+        }
+    }
+
+    // Navbar link section ++++
+
+    &_list {
+        display: flex;
+
+        &--item {
+            list-style: none;
+            margin-left: 10px;
+
+            &-link {
+                text-decoration: none;
+                font-size: 20px;
+                letter-spacing: 1px;
+                color: #263238;
+                font-weight: 500;
+                margin-left: 20px;
+                transition: all 0.2s;
+
+                &:hover {
+                    padding-bottom: 3px;
+                    border-bottom: 2px solid #000;
+                }
+            }
+        }
+    }
+
+    // Button section ++++
+
+    &__btn {
+        padding: 17px 57px;
+        border: 2px solid #263238;
+        border-radius: 5px;
+        background: #fff;
+        font-size: 24px;
+        font-weight: 400;
+
+        &:hover {
+            background: #ccc;
+            cursor: pointer;
+        }
+        &:active {
+            opacity: 0.6;
+        }
+    }
+
+    .menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .container {
+        max-width: 992px;
+        margin: 0px auto;
+        padding: 0px 31px;
+    }
+
+    .navbar {
+
+        &__title {
+            font-size: 30px;
+        }
+
+        &_list {
+
+            &--item {
+
+                &-link {
+                    font-size: 16px;
+                }
+            }
+        }
+        
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    
+    .container {
+        max-width: 767px;
+        margin: 0 auto;
+        padding: 0px 39px;
+    }
+
+    .navbar {
+        position: relative;
+        top: 0;
+        left: 0;
+        &_list {
+            display: none;
+            text-align: center;
+            position: absolute;
+            top: 30px;
+            left: 0px;
+            width: 100%;
+            height: 440px;
+            background: rgba(0, 0, 0, 0.09);
+            transition: all 0.3s;
+
+            &--item {
+                padding: 20px;
+
+                &-link {
+                    font-size: 25px;
+                }
+            }
+        }
+
+        .active-list {
+            display: block;
+            transition: all 0.3s;
+        }
+
+        &__btn {
+            display: none;
+            position: absolute;
+            top: 370px;
+            left: 50%;
+            transform: translateX(-40%);
+            transition: all 0.3s;
+        }
+
+        .active-btn {
+            display: block;
+            transition: all 0.3s;
+        }
+
+        .menu {
+            display: block;
+            z-index: 111;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.about {
+
+    &__main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &--left {
+            h1 {
+                font-size: 48px;
+                line-height: 80px;
+            }
+            p { 
+                font-size: 20px;
+                color: #8F95A5;
+                width: 635px;
+                line-height: 30px;
+            }
+
+            .rating {
+                width: 635px;
+                margin-top: 40px;
+                display: flex;
+                justify-content: space-between;
+
+                .item {
+                    text-align: center;
+
+                    h3 {
+                        font-size: 48px;
+                        color: #2A3246;
+                    }
+                    span {
+                        font-size: 20px;
+                        line-height: 30px;
+                        color: #8F95A5;
+                    }
+                }
+            }
+        }
+    }
+}
